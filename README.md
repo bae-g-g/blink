@@ -1,14 +1,14 @@
 
-#Arduino Blink with p5.js Web Serial Control
+# Arduino Blink with p5.js Web Serial Control
 
-###유트브 링크 
+## 유트브 링크 
 
 
 
 ![image](https://github.com/user-attachments/assets/0b16ab2e-18f1-4164-80dd-bac7d4ad4769)
 
 
-##Arduino
+# Arduino
 ![스크린샷 2025-03-16 오후 6 42 05](https://github.com/user-attachments/assets/e06c108e-3ed5-4211-81fa-5dda64163a52)
 
 Red LED ( 9번 핀)
@@ -25,7 +25,7 @@ LED는 330옴 저항을 연결하였습니다.
 
 
 
-기본기능
+## 기본기능
 
 RED -> YELLOW -> GREEN -> BLINK(OFF -> GREEN -> OFF -> GREEN -> OFF -> GREEN) -> YELLOW
 순서대로 9개의 동작으로 나누어 
@@ -33,12 +33,12 @@ Normal_Task가 현재 순서에 맞추어 주기를 설정하여 그 주기에 �
 
 
 
-버튼 
+## 버튼 
 
 pinchangeinterrupt를 통해서 버튼을 확인 합니다. 
 
 
-기능1 Emergency 
+## 기능1 Emergency 
 
 버튼1이 눌릴경우 Emergency_state 함수를 호출해서
 현재 LED의 밝기를  RED =255 , YELLOW = 0 , GREEN = 0 으로 설정하고
@@ -46,7 +46,7 @@ pinchangeinterrupt를 통해서 버튼을 확인 합니다.
 다시 눌릴경우
 normal_state 함수를 호출해서 기본기능을 실행합니다.
 
-기능2 Blink
+## 기능2 Blink
 
 버튼2가 눌릴경우 Blink_State 함수를 호출해서
 현재 작동하는 스케줄러를 종료시키고.
@@ -55,7 +55,7 @@ Blink_Task는 250ms주기로 모든 LED의 밝기를 0과 255로 순차적으로
 다시 눌릴경우
 normal_state 함수를 호출해서 기본기능을 실행합니다.
 
-기능3 on/off
+## 기능3 on/off
 
 버튼3이 눌릴경우 Off_State 함수를 호출해서
 현재 작동하는 스케줄러를 종료시키고
@@ -66,7 +66,7 @@ normal_state 함수를 호출해서 기본기능을 실행합니다.
 
 
 
-가변저항
+## 가변저항
 
 LED의 밝기를 설정하는 Set_Bright함수가 호출시 
 가변저항의 값을 읽어 0~1023의 값을 1023으로 나누어 비율로 환산해서
@@ -80,7 +80,7 @@ Pot_Callback은 가변저항의 변화가 있는경우 밝기를 갱신합니다
 
 
 
-시리얼통신
+## 시리얼통신
 
 serialEvent 함수를 통해서 데이터를 수신합니다.
 웹에서 데이터를 정보 + 정보인덱스 + 개행문자의 조합으로 송신하기때문에
@@ -103,12 +103,12 @@ Emergeny_State,Blink_State,Off_state,Normal_State함수에서 상태가 변경�
 
 
 
-p5.js
+# p5.js
 ![스크린샷 2025-03-16 오후 7 17 34](https://github.com/user-attachments/assets/d0a35cca-f847-43ee-a8dc-569e454295bf)
 
 
 
-신호등 설정 밝기 인디케이터
+## 신호등 설정 밝기 인디케이터
 
 아두이노에서 밝기가 변경되는 경우 송신하는 데이터를 수신하여 read_bright함수가 호출됩니다.
 각 Red,Yellow,Green의 밝기값을 bright_arr에 저장합니다.
@@ -117,7 +117,7 @@ bright_arr값은 웹의 우측하단 Brightness에 개별적으로 텍스트를 
 
 
 
-현재 신호등 상태 표시
+## 현재 신호등 상태 표시
 
 아두이노를 통해 갱신되는 bright_arr값으로
 웹의 상단중앙부에 신호등 모양의 원의 밝기를 
@@ -130,7 +130,7 @@ bright_arr값은 웹의 우측하단 Brightness에 개별적으로 텍스트를 
 
 
 
-신호등 모드 인디케이터
+## 신호등 모드 인디케이터
 
 
 아두이노에서 상태가 변경되는 경우 송신하는 데이터를 수신하여 read_state함수가 호출됩니다.
@@ -139,7 +139,7 @@ state변수는 웹의 중앙하단부 State에 파란색 사각형으로 그려�
 
 
 
-R,Y,G 신호 각각의 길이 변경 슬라이더
+## R,Y,G 신호 각각의 길이 변경 슬라이더
 
 웹의 좌측하단부 interval에 있는 3개의 슬라이더가
 각각 R,Y,G의 신호 주기를 변경 할 수 있도록 합니다.
@@ -153,7 +153,7 @@ Slider함수는 3개의 값을  data변수에 문자열로 저장해하여
 
 
 
-state 버튼
+## state 버튼
 
 각  emergency,blink,off,normal에 해당하는 버튼이 눌리는 경우
 emergency_buuton,blink_buuton,off_buuton,normal_buuton함수가 호출됩니다.
