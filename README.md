@@ -4,7 +4,10 @@
 ## 유트브 링크 
 - 작동설명
   https://youtu.be/pDX98mS9Ldc?si=K6_6Ifezuskv7glN
-
+- 아두이노 코드 설명
+https://youtu.be/9J7bw1u8GeM?si=LmlO0U5ShBDX8VP5
+- p5.js 코드 설명 
+https://youtu.be/2N-TeJWmRuA?si=iGLT7jIxwPjh3j5M
 
 ![image](https://github.com/user-attachments/assets/0b16ab2e-18f1-4164-80dd-bac7d4ad4769)
 
