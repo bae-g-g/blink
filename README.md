@@ -2,7 +2,8 @@
 # Arduino Blink with p5.js Web Serial Control
 
 ## 유트브 링크 
-
+- 작동설명
+  https://youtu.be/pDX98mS9Ldc?si=K6_6Ifezuskv7glN
 
 
 ![image](https://github.com/user-attachments/assets/0b16ab2e-18f1-4164-80dd-bac7d4ad4769)
