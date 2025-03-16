@@ -33,13 +33,14 @@ Normal_Task가 현재 순서에 맞추어 주기를 설정하여 그 주기에 �
 
 
 
-## 버튼 
 
-pinchangeinterrupt를 통해서 버튼을 확인 합니다. 
+
+
 
 
 ## 기능1 Emergency 
 
+pinchangeinterrupt를 통해서 버튼을 확인 합니다. 
 버튼1이 눌릴경우 Emergency_state 함수를 호출해서
 현재 LED의 밝기를  RED =255 , YELLOW = 0 , GREEN = 0 으로 설정하고
 현재 작동하는 스케줄러를 종료시킵니다.
@@ -48,6 +49,7 @@ normal_state 함수를 호출해서 기본기능을 실행합니다.
 
 ## 기능2 Blink
 
+pinchangeinterrupt를 통해서 버튼을 확인 합니다. 
 버튼2가 눌릴경우 Blink_State 함수를 호출해서
 현재 작동하는 스케줄러를 종료시키고.
 Blink_Task를 활성화 시킵니다.
@@ -57,6 +59,7 @@ normal_state 함수를 호출해서 기본기능을 실행합니다.
 
 ## 기능3 on/off
 
+pinchangeinterrupt를 통해서 버튼을 확인 합니다. 
 버튼3이 눌릴경우 Off_State 함수를 호출해서
 현재 작동하는 스케줄러를 종료시키고
 모든 LED의 밝기를 0으로 설정합니다. 
